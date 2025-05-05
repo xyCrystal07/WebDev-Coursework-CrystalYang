@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kai's Project Design</title>
+    </head>
+    <body>
+        <h1>Kai's Project Design Showcase</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Goal</h2>
+            <p>Kai needed a way to design his project so it could be demonstrated more conveniently and clearly to an audience.</p>
+        </section>
+
+        <section>
+            <h2>Brainstorming Highlights</h2>
+            <h3>1. Idea Board Creation</h3>
+            <ul>
+                <li>Used an idea board to organize thoughts visually.</li>
+                <li>Grouped ideas into key categories: 
+                    <ul>
+                        <li><em>Design Simplification</em></li>
+                        <li><em>Demonstration Tools</em></li>
+                        <li><em>Audience Engagement</em></li>
+                    </ul>
+                </li>
+                <li>Helped identify practical and goal-aligned solutions.</li>
+            </ul>
+
+            <h3>2. Key Takeaways</h3>
+            <ol>
+                <li><strong>Simplicity enhances clarity</strong> – streamlined designs are easier to understand.</li>
+                <li><strong>Use of visual and interactive elements</strong> – boosts engagement and demonstration quality.</li>
+                <li><strong>Audience perspective matters</strong> – tailoring the design to the viewer improves impact.</li>
+                <li><strong>Testing before presenting</strong> – ensures the demonstration goes smoothly.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kai's Project Demo</p>
+    </footer>
+</body>
+</html>
