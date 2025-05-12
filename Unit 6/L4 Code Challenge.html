@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kai's Project Design</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Existing styles... */
+
+        /* Feedback form styles */
+        .feedback-form {
+            background-color: #ffffffcc;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 600px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .feedback-form textarea {
+            height: 100px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .feedback-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Existing content... -->
+
+    <main>
+        <!-- Existing sections... -->
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-form">
+            <h2>We Value Your Feedback</h2>
+            <form action="submit-feedback.php" method="POST">
+                <label for="first-impression">1. What is your first impression of your web page?</label>
+                <textarea id="first-impression" name="first_impression" required></textarea>
+
+                <label for="three-words">2. What are three words you would use to describe the 'feel' of this page?</label>
+                <input type="text" id="three-words" name="three_words" required>
+
+                <label for="desired-feel">3. Is this 'feeling' or impression what you wanted for your page?</label>
+                <textarea id="desired-feel" name="desired_feel" required></textarea>
+
+                <label for="text-readability">4. How easy is the text to read?</label>
+                <textarea id="text-readability" name="text_readability" required></textarea>
+
+                <label for="page-need">5. How does this page meet the need you have for wanting a web page?</label>
+                <textarea id="page-need" name="page_need" required></textarea>
+
+                <label for="like-about-page">6. What is something you like about the web page?</label>
+                <textarea id="like-about-page" name="like_about_page" required></textarea>
+
+                <label for="suggestion">7. What is a suggestion you have for changing the web page? How would this change improve the web page?</label>
+                <textarea id="suggestion" name="suggestion" required></textarea>
+
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+    </main>
+
+    <!-- Existing footer... -->
+</body>
+</html>
