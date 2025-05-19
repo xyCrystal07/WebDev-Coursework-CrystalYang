@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the 17 Sustainable Development Goals to build a better future by 2030.">
+    <title>Global Goals</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2e7d32;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Positioning Classes */
+        .pos-static {
+            position: static; /* Default positioning, follows normal flow */
+        }
+
+        .pos-relative {
+            position: relative; /* Relative to its normal position */
+        }
+
+        .pos-absolute {
+            position: absolute; /* Relative to nearest positioned ancestor */
+        }
+
+        .pos-fixed {
+            position: fixed; /* Relative to viewport, stays in place on scroll */
+        }
+
+        .pos-sticky {
+            position: sticky; /* Sticks to position when scrolling */
+            top: 0;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sdg-hero.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem; /* Box model: reduced padding for tighter layout */
+            margin-bottom: 1.5rem; /* Box model: added margin for spacing */
+            border-bottom: 2px solid var(--primary-color); /* Box model: border for emphasis */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size caveats: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; /* Box model: centered with auto margins */
+            padding: 0 1rem; /* Box model: consistent padding */
+        }
+
+        .introduction {
+            padding: 2rem 0; /* Box model: vertical padding */
+            margin: 1rem 0; /* Box model: vertical margin */
+            text-align: center;
+            border: 1px solid #ccc; /* Box model: subtle border */
+            border-radius: 8px; /* Box model: rounded corners */
+        }
+
+        .introduction h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .sdg-section {
+            background: #f9f9f9;
+            padding: 2rem 0; /* Box model: vertical padding */
+            margin: 1rem 0; /* Box model: vertical margin */
+            position: relative; /* Enable absolute positioning for children */
+        }
+
+        .sdg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem; /* Box model: spacing between grid items */
+            margin: 2rem 0; /* Box model: vertical margin */
+        }
+
+        .sdg-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            padding: 1rem; /* Box model: internal padding */
+            border: 1px solid var(--primary-color); /* Box model: border */
+            position: relative; /* Enable absolute positioning for children */
+        }
+
+        .sdg-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .sdg-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            loading: lazy;
+            margin-bottom: 0.5rem; /* Box model: spacing below image */
+        }
+
+        .sdg-item h3 {
+ “
+
+            font-size: 1.3rem;
+            padding: 0.5rem 0; /* Box model: reduced padding */
+            color: var(--primary-color);
+        }
+
+        .sdg-item p {
+            padding: 0 0.5rem 1rem; /* Box model: padding for text */
+            font-size: 0.9rem;
+        }
+
+        /* Absolute positioned badge for SDGs */
+        .sdg-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50%;
+            font-size: 0.8rem;
+        }
+
+        .feedback-form {
+            background: white;
+            padding: 2rem; /* Box model: internal padding */
+            margin: 2rem auto; /* Box model: centered with margin */
+            max-width: 600px;
+            border: 2px solid var(--primary-color); /* Box model: border */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: static; /* Explicit static positioning */
+        }
+
+        .feedback-form h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem; /* Box model: spacing below heading */
+        }
+
+        .feedback-form label {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 0.625rem; /* Box model: internal padding */
+            border: 1px solid #ccc; /* Box model: border */
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 0.5rem; /* Box model: spacing below inputs */
+        }
+
+        .feedback-form textarea {
+            height: 100px;
+        }
+
+        .feedback-form input[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem; /* Box model: padding */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem; /* Box model: spacing above button */
+        }
+
+        .feedback-form input[type="submit"]:hover,
+        .feedback-form input[type="submit"]:focus {
+            background-color: var(--secondary-color);
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem; /* Box model: padding */
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin: 1rem 0; /* Box model: vertical margin */
+            transition: background-color 0.3s ease;
+            position: fixed; /* Fixed positioning for persistent CTA */
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: var(--secondary-color);
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem; /* Box model: padding */
+            margin-top: 2rem; /* Box model: margin */
+            position: relative; /* Allow for absolute children if needed */
+        }
+
+        /* Sticky navigation bar for quick access */
+        .nav-bar {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            margin-bottom: 1rem; /* Box model: spacing below */
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .feedback-form {
+                max-width: 90%;
+                padding: 1.5rem; /* Box model: adjusted padding */
+            }
+
+            .sdg-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .cta-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 0.5rem 1rem; /* Box model: reduced padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem; /* Box model: adjusted padding */
+            }
+
+            .sdg-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .introduction h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-bar a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar pos-sticky">
+        <a href="#introduction">About</a>
+        <a href="#sdgs">Goals</a>
+        <a href="#feedback">Feedback</a>
+    </div>
+
+    <header class="pos-relative">
+        <div class="container">
+            <h1>Sustainable Development Goals</h1>
+            <p>A Blueprint for a Better World by 2030</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="introduction pos-static" id="introduction">
+            <h2>About the Global Goals</h2>
+            <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure prosperity for all by 2030.</p>
+            <p>Adopted by all United Nations Member States in 2015, the 17 goals address global challenges through partnership and collective effort.</p>
+        </section>
+
+        <section class="sdg-section pos-relative" id="sdgs">
+            <div class="container">
+                <div class="sdg-grid">
+                    <div class="sdg-item pos-static">
+                        <img src="sdg1.png" alt="Goal 1: No Poverty">
+                        <h3>Goal 1: No Poverty</h3>
+                        <p>End poverty in all its forms everywhere.</p>
+                        <span class="sdg-badge pos-absolute">1</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg2.png" alt="Goal 2: Zero Hunger">
+                        <h3>Goal 2: Zero Hunger</h3>
+                        <p>End hunger, achieve food security, and promote sustainable agriculture.</p>
+                        <span class="sdg-badge pos-absolute">2</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg3.png" alt="Goal 3: Good Health and Well-being">
+                        <h3>Goal 3: Good Health</h3>
+                        <p>Ensure healthy lives and promote well-being for all at all ages.</p>
+                        <span class="sdg-badge pos-absolute">3</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg4.png" alt="Goal 4: Quality Education">
+                        <h3>Goal 4: Quality Education</h3>
+                        <p>Ensure inclusive and equitable quality education for all.</p>
+                        <span class="sdg-badge pos-absolute">4</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg5.png" alt="Goal 5: Gender Equality">
+                        <h3>Goal 5: Gender Equality</h3>
+                        <p>Achieve gender equality and empower all women and girls.</p>
+                        <span class="sdg-badge pos-absolute">5</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg6.png" alt="Goal 6: Clean Water and Sanitation">
+                        <h3>Goal 6: Clean Water</h3>
+                        <p>Ensure availability and sustainable management of water and sanitation.</p>
+                        <span class="sdg-badge pos-absolute">6</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg7.png" alt="Goal 7: Affordable and Clean Energy">
+                        <h3>Goal 7: Clean Energy</h3>
+                        <p>Ensure access to affordable, reliable, sustainable energy.</p>
+                        <span class="sdg-badge pos-absolute">7</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg8.png" alt="Goal 8: Decent Work and Economic Growth">
+                        <h3>Goal 8: Decent Work</h3>
+                        <p>Promote sustained, inclusive, and sustainable economic growth.</p>
+                        <span class="sdg-badge pos-absolute">8</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg9.png" alt="Goal 9: Industry, Innovation and Infrastructure">
+                        <h3>Goal 9: Innovation</h3>
+                        <p>Build resilient infrastructure and foster innovation.</p>
+                        <span class="sdg-badge pos-absolute">9</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg10.png" alt="Goal 10: Reduced Inequalities">
+                        <h3>Goal 10: Reduced Inequalities</h3>
+                        <p>Reduce income inequality within and among countries.</p>
+                        <span class="sdg-badge pos-absolute">10</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg11.png" alt="Goal 11: Sustainable Cities and Communities">
+                        <h3>Goal 11: Sustainable Cities</h3>
+                        <p>Make cities inclusive, safe, resilient, and sustainable.</p>
+                        <span class="sdg-badge pos-absolute">11</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg12.png" alt="Goal 12: Responsible Consumption and Production">
+                        <h3>Goal 12: Responsible Consumption</h3>
+                        <p>Ensure sustainable consumption and production patterns.</p>
+                        <span class="sdg-badge pos-absolute">12</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg13.png" alt="Goal 13: Climate Action">
+                        <h3>Goal 13: Climate Action</h3>
+                        <p>Take urgent action to combat climate change and its impacts.</p>
+                        <span class="sdg-badge pos-absolute">13</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg14.png" alt="Goal 14: Life Below Water">
+                        <h3>Goal 14: Life Below Water</h3>
+                        <p>Conserve and sustainably use oceans, seas, and marine resources.</p>
+                        <span class="sdg-badge pos-absolute">14</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg15.png" alt="Goal 15: Life on Land">
+                        <h3>Goal 15: Life on Land</h3>
+                        <p>Protect and restore terrestrial ecosystems and biodiversity.</p>
+                        <span class="sdg-badge pos-absolute">15</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg16.png" alt="Goal 16: Peace, Justice and Strong Institutions">
+                        <h3>Goal 16: Peace and Justice</h3>
+                        <p>Promote peaceful and inclusive societies for sustainable development.</p>
+                        <span class="sdg-badge pos-absolute">16</span>
+                    </div>
+                    <div class="sdg-item pos-static">
+                        <img src="sdg17.png" alt="Goal 17: Partnerships for the Goals">
+                        <h3>Goal 17: Partnerships</h3>
+                        <p>Strengthen global partnerships for sustainable development.</p>
+                        <span class="sdg-badge pos-absolute">17</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback-form pos-static" id="feedback">
+            <div class="container">
+                <h2>Share Your Feedback</h2>
+                <form action="submit-feedback.php" method="POST" onsubmit="return validateForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" aria-label="Your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" aria-label="Your email" required>
+
+                    <label for="favorite-goal">Which Global Goal inspires you the most?</label>
+                    <input type="text" id="favorite-goal" name="favorite_goal" aria-label="Favorite Global Goal" required>
+
+                    <label for="ideas">How can we promote the Global Goals in our community?</label>
+                    <textarea id="ideas" name="ideas" aria-label="Ideas for promoting Global Goals" required></textarea>
+
+                    <input type="submit" value="Submit Feedback">
+                </form>
+                <a href="https://www.un.org/sustainabledevelopment/" class="cta-button pos-fixed">Learn More About the SDGs</a>
