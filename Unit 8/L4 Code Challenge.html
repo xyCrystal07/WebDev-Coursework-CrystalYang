@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Goals - Adaptive</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2e7d32;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Base Mobile Styles (default) */
+        .container {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            text-align: center;
+        }
+
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .goal-container {
+            margin: 2rem 0;
+        }
+
+        .goal-card {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Tablet Breakpoint (768px) */
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+                margin: 0 auto;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .nav-links li {
+                margin-bottom: 0;
+            }
+
+            .goal-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        /* Desktop Breakpoint (992px) */
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+
+            header {
+                padding: 3rem 1rem;
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.jpg') center/cover;
+            }
+
+            .goal-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Large Desktop Breakpoint (1200px) */
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+
+            .goal-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sustainable Development Goals</h1>
+            <p>A blueprint for a better and more sustainable future</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="goals" class="goal-container">
+            <div class="goal-card">
+                <h3>Goal 1: No Poverty</h3>
+                <p>End poverty in all its forms everywhere</p>
+            </div>
+            <div class="goal-card">
+                <h3>Goal 2: Zero Hunger</h3>
+                <p>End hunger, achieve food security</p>
+            </div>
+            <div class="goal-card">
+                <h3>Goal 3: Good Health</h3>
+                <p>Ensure healthy lives for all</p>
+            </div>
+            <div class="goal-card">
+                <h3>Goal 4: Quality Education</h3>
+                <p>Ensure inclusive education for all</p>
+            </div>
+            <!-- More goals would go here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Global Goals Initiative</p>
+        </div>
+    </footer>
+</body>
+</html>

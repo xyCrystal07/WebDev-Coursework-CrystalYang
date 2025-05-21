@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the 17 Sustainable Development Goals to build a better future by 2030.">
+    <title>Global Goals</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2e7d32;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --box-shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Display Property Classes */
+        .d-block { display: block; }
+        .d-inline { display: inline; }
+        .d-inline-block { display: inline-block; }
+        .d-flex { display: flex; }
+        .d-inline-flex { display: inline-flex; }
+        .d-grid { display: grid; }
+        .d-none { display: none; }
+
+        /* Flex Direction Classes */
+        .flex-row { flex-direction: row; }
+        .flex-row-reverse { flex-direction: row-reverse; }
+        .flex-col { flex-direction: column; }
+        .flex-col-reverse { flex-direction: column-reverse; }
+
+        /* Flex Alignment Classes */
+        .justify-start { justify-content: flex-start; }
+        .justify-end { justify-content: flex-end; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-around { justify-content: space-around; }
+        .justify-evenly { justify-content: space-evenly; }
+
+        .align-start { align-items: flex-start; }
+        .align-end { align-items: flex-end; }
+        .align-center { align-items: center; }
+        .align-baseline { align-items: baseline; }
+        .align-stretch { align-items: stretch; }
+
+        /* Positioning Classes */
+        .position-relative { position: relative; }
+        .position-absolute { position: absolute; }
+        .position-fixed { position: fixed; }
+        .position-sticky { position: sticky; }
+
+        .top-0 { top: 0; }
+        .right-0 { right: 0; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+
+        .z-index-1 { z-index: 1; }
+        .z-index-2 { z-index: 2; }
+        .z-index-3 { z-index: 3; }
+
+        /* Box Model Classes */
+        .box {
+            display: block;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .box:hover {
+            box-shadow: var(--box-shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .box-padding-sm { padding: 1rem; }
+        .box-padding-md { padding: 1.5rem; }
+        .box-padding-lg { padding: 2rem; }
+
+        .box-margin-sm { margin: 0.5rem; }
+        .box-margin-md { margin: 1rem; }
+        .box-margin-lg { margin: 1.5rem; }
+
+        .box-border { border: 1px solid #e0e0e0; }
+        .box-border-primary { border: 2px solid var(--primary-color); }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sdg-hero.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Introduction Section */
+        .introduction {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .introduction h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .introduction p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+
+        /* SDG Grid Section */
+        .sdg-section {
+            background: #f9f9f9;
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .sdg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .sdg-item {
+            composes: box;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .sdg-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .sdg-item-content {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sdg-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 3rem 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Feedback Form */
+        .feedback-section {
+            padding: 3rem 0;
+        }
+
+        .feedback-form {
+            composes: box;
+            composes: box-padding-md;
+            composes: box-border-primary;
+            margin: 0 auto;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .sdg-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Sustainable Development Goals</h1>
+            <p>A Blueprint for a Better World by 2030</p>
+            <a href="#feedback" class="cta-button" aria-label="Share your thoughts about the SDGs">Share Your Thoughts</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="#" class="d-inline-block">
+                <img src="logo.png" alt="Global Goals Logo" height="40">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="introduction">
+            <h2>About the Global Goals</h2>
+            <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure prosperity for all by 2030.</p>
+            <p>Adopted by all United Nations Member States in 2015, the 17 goals address global challenges through partnership and collective effort.</p>
+        </section>
+
+        <section id="goals" class="sdg-section">
+            <h2 class="section-title">The 17 Sustainable Development Goals</h2>
+            <div class="sdg-grid">
+                <!-- SDG Items (same as before) -->
+                <div class="sdg-item">
+                    <img src="sdg1.png" alt="Goal 1: No Poverty" loading="lazy">
+                    <div class="sdg-item-content">
+                        <h3>Goal 1: No Poverty</h3>
+                        <p>End poverty in all its forms everywhere.</p>
+                        <a href="#" class="d-inline-block cta-button" style="margin-top: auto; width: fit-content;">Learn More</a>
+                    </div>
+                </div>
+                <!-- Repeat for other SDG items -->
+            </div>
+        </section>
+
+        <section id="progress" class="stats-section">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Our Progress So Far</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">193</div>
+                        <div class="stat-label">Countries Committed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">Global Goals</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">169</div>
+                        <div class="stat-label">Targets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">230</div>
+                        <div class="stat-label">Indicators</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="feedback-section">
+            <h2 class="section-title">Share Your Feedback</h2>
+            <form class="feedback-form" action="submit-feedback.php" method="POST" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" aria-label="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" aria-label="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="favorite-goal">Which Global Goal inspires you the most?</label>
+                    <input type="text" id="favorite-goal" name="favorite_goal" aria-label="Favorite Global Goal" required>
+                </div>
+                <div class="form-group">
+                    <label for="ideas">How can we promote the Global Goals in our community?</label>
+                    <textarea id="ideas" name="ideas" aria-label="Ideas for promoting Global Goals" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>We're committed to raising awareness about the UN Sustainable Development Goals and tracking global progress.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About SDGs</a></li>
+                        <li><a href="#goals">The 17 Goals</a></li>
+                        <li><a href="#progress">Progress</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">UN SDGs</a></li>
+                        <li><a href="https://sdgs.un.org/goals" target="_blank">Goals Overview</a></li>
+                        <li><a href="https://sdgs.un.org/targets" target="_blank">Targets</a></li>
+                        <li><a href="https://sdgs.un.org/partnerships" target="_blank">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Global Goals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            return true;
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
