@@ -89,7 +89,6 @@
             width: 100%;
             height: 150px;
             object-fit: cover;
-            loading: lazy;
         }
 
         .sdg-item h3 {
@@ -221,10 +220,10 @@
     <header>
         <h1>Sustainable Development Goals</h1>
         <p>A Blueprint for a Better World by 2030</p>
-        <a href="#feedback" class="cta-button">Share Your Thoughts</a>
+        <a href="#feedback" class="cta-button" aria-label="Share your thoughts about the SDGs">Share Your Thoughts</a>
     </header>
 
-    <div class="container">
+    <main class="container">
         <section class="introduction">
             <h2>About the Global Goals</h2>
             <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure prosperity for all by 2030.</p>
@@ -232,93 +231,91 @@
         </section>
 
         <section class="sdg-section">
-            <div class="container">
-                <div class="sdg-grid">
-                    <div class="sdg-item">
-                        <img src="sdg1.png" alt="Goal 1: No Poverty">
-                        <h3>Goal 1: No Poverty</h3>
-                        <p>End poverty in all its forms everywhere.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg2.png" alt="Goal 2: Zero Hunger">
-                        <h3>Goal 2: Zero Hunger</h3>
-                        <p>End hunger, achieve food security, and promote sustainable agriculture.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg3.png" alt="Goal 3: Good Health and Well-being">
-                        <h3>Goal 3: Good Health</h3>
-                        <p>Ensure healthy lives and promote well-being for all at all ages.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg4.png" alt="Goal 4: Quality Education">
-                        <h3>Goal 4: Quality Education</h3>
-                        <p>Ensure inclusive and equitable quality education for all.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg5.png" alt="Goal 5: Gender Equality">
-                        <h3>Goal 5: Gender Equality</h3>
-                        <p>Achieve gender equality and empower all women and girls.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg6.png" alt="Goal 6: Clean Water and Sanitation">
-                        <h3>Goal 6: Clean Water</h3>
-                        <p>Ensure availability and sustainable management of water and sanitation.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg7.png" alt="Goal 7: Affordable and Clean Energy">
-                        <h3>Goal 7: Clean Energy</h3>
-                        <p>Ensure access to affordable, reliable, sustainable energy.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg8.png" alt="Goal 8: Decent Work and Economic Growth">
-                        <h3>Goal 8: Decent Work</h3>
-                        <p>Promote sustained, inclusive, and sustainable economic growth.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg9.png" alt="Goal 9: Industry, Innovation and Infrastructure">
-                        <h3>Goal 9: Innovation</h3>
-                        <p>Build resilient infrastructure and foster innovation.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg10.png" alt="Goal 10: Reduced Inequalities">
-                        <h3>Goal 10: Reduced Inequalities</h3>
-                        <p>Reduce income inequality within and among countries.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg11.png" alt="Goal 11: Sustainable Cities and Communities">
-                        <h3>Goal 11: Sustainable Cities</h3>
-                        <p>Make cities inclusive, safe, resilient, and sustainable.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg12.png" alt="Goal 12: Responsible Consumption and Production">
-                        <h3>Goal 12: Responsible Consumption</h3>
-                        <p>Ensure sustainable consumption and production patterns.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg13.png" alt="Goal 13: Climate Action">
-                        <h3>Goal 13: Climate Action</h3>
-                        <p>Take urgent action to combat climate change and its impacts.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg14.png" alt="Goal 14: Life Below Water">
-                        <h3>Goal 14: Life Below Water</h3>
-                        <p>Conserve and sustainably use oceans, seas, and marine resources.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg15.png" alt="Goal 15: Life on Land">
-                        <h3>Goal 15: Life on Land</h3>
-                        <p>Protect and restore terrestrial ecosystems and biodiversity.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg16.png" alt="Goal 16: Peace, Justice and Strong Institutions">
-                        <h3>Goal 16: Peace and Justice</h3>
-                        <p>Promote peaceful and inclusive societies for sustainable development.</p>
-                    </div>
-                    <div class="sdg-item">
-                        <img src="sdg17.png" alt="Goal 17: Partnerships for the Goals">
-                        <h3>Goal 17: Partnerships</h3>
-                        <p>Strengthen global partnerships for sustainable development.</p>
-                    </div>
+            <div class="sdg-grid">
+                <div class="sdg-item">
+                    <img src="sdg1.png" alt="Goal 1: No Poverty" loading="lazy">
+                    <h3>Goal 1: No Poverty</h3>
+                    <p>End poverty in all its forms everywhere.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg2.png" alt="Goal 2: Zero Hunger" loading="lazy">
+                    <h3>Goal 2: Zero Hunger</h3>
+                    <p>End hunger, achieve food security, and promote sustainable agriculture.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg3.png" alt="Goal 3: Good Health and Well-being" loading="lazy">
+                    <h3>Goal 3: Good Health</h3>
+                    <p>Ensure healthy lives and promote well-being for all at all ages.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg4.png" alt="Goal 4: Quality Education" loading="lazy">
+                    <h3>Goal 4: Quality Education</h3>
+                    <p>Ensure inclusive and equitable quality education for all.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg5.png" alt="Goal 5: Gender Equality" loading="lazy">
+                    <h3>Goal 5: Gender Equality</h3>
+                    <p>Achieve gender equality and empower all women and girls.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg6.png" alt="Goal 6: Clean Water and Sanitation" loading="lazy">
+                    <h3>Goal 6: Clean Water</h3>
+                    <p>Ensure availability and sustainable management of water and sanitation.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg7.png" alt="Goal 7: Affordable and Clean Energy" loading="lazy">
+                    <h3>Goal 7: Clean Energy</h3>
+                    <p>Ensure access to affordable, reliable, sustainable energy.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg8.png" alt="Goal 8: Decent Work and Economic Growth" loading="lazy">
+                    <h3>Goal 8: Decent Work</h3>
+                    <p>Promote sustained, inclusive, and sustainable economic growth.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg9.png" alt="Goal 9: Industry, Innovation and Infrastructure" loading="lazy">
+                    <h3>Goal 9: Innovation</h3>
+                    <p>Build resilient infrastructure and foster innovation.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg10.png" alt="Goal 10: Reduced Inequalities" loading="lazy">
+                    <h3>Goal 10: Reduced Inequalities</h3>
+                    <p>Reduce income inequality within and among countries.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg11.png" alt="Goal 11: Sustainable Cities and Communities" loading="lazy">
+                    <h3>Goal 11: Sustainable Cities</h3>
+                    <p>Make cities inclusive, safe, resilient, and sustainable.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg12.png" alt="Goal 12: Responsible Consumption and Production" loading="lazy">
+                    <h3>Goal 12: Responsible Consumption</h3>
+                    <p>Ensure sustainable consumption and production patterns.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg13.png" alt="Goal 13: Climate Action" loading="lazy">
+                    <h3>Goal 13: Climate Action</h3>
+                    <p>Take urgent action to combat climate change and its impacts.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg14.png" alt="Goal 14: Life Below Water" loading="lazy">
+                    <h3>Goal 14: Life Below Water</h3>
+                    <p>Conserve and sustainably use oceans, seas, and marine resources.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg15.png" alt="Goal 15: Life on Land" loading="lazy">
+                    <h3>Goal 15: Life on Land</h3>
+                    <p>Protect and restore terrestrial ecosystems and biodiversity.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg16.png" alt="Goal 16: Peace, Justice and Strong Institutions" loading="lazy">
+                    <h3>Goal 16: Peace and Justice</h3>
+                    <p>Promote peaceful and inclusive societies for sustainable development.</p>
+                </div>
+                <div class="sdg-item">
+                    <img src="sdg17.png" alt="Goal 17: Partnerships for the Goals" loading="lazy">
+                    <h3>Goal 17: Partnerships</h3>
+                    <p>Strengthen global partnerships for sustainable development.</p>
                 </div>
             </div>
         </section>
@@ -340,9 +337,9 @@
 
                 <input type="submit" value="Submit Feedback">
             </form>
-            <a href="https://www.un.org/sustainabledevelopment/" class="cta-button" target="_blank">Learn More About the SDGs</a>
+            <a href="https://www.un.org/sustainabledevelopment/" class="cta-button" target="_blank" aria-label="Learn more about the United Nations Sustainable Development Goals">Learn More About the SDGs</a>
         </section>
-    </div>
+    </main>
 
     <footer>
         <p>© 2025 Global Goals. All rights reserved.</p>
