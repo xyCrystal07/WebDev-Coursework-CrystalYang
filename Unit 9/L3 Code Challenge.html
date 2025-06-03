@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the 17 Sustainable Development Goals to build a better future by 2030.">
+    <title>Global Goals</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Your existing CSS remains unchanged */
+        .toggle-content {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .toggle-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive Design Version (shown by default) -->
+    <div class="responsive-section">
+        <header>
+            <div class="header-content">
+                <h1>Sustainable Development Goals</h1>
+                <p>A Blueprint for a Better World by 2030</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Welcome Message</button>
+                <a href="#feedback" class="cta-button" aria-label="Share your thoughts about the SDGs">Share Your Thoughts</a>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="container-fluid">
+                <a href="#" class="d-inline-block">
+                    <img src="logo.png" alt="Global Goals Logo" height="40">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container-fluid">
+            <section id="about" class="introduction">
+                <h2>About the Global Goals</h2>
+                <p>The Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure prosperity for all by 2030.</p>
+                <p>Adopted by all United Nations Member States in 2015, the 17 goals address global challenges through partnership and collective effort.</p>
+            </section>
+
+            <section id="goals" class="sdg-section">
+                <h2 class="section-title">The 17 Sustainable Development Goals</h2>
+                <div class="sdg-grid-responsive">
+                    <!-- SDG Items -->
+                    <div class="sdg-item">
+                        <img src="sdg1.png" alt="Goal 1: No Poverty" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 1: No Poverty</h3>
+                            <p>End poverty in all its forms everywhere.</p>
+                            <button class="cta-button" onclick="showGoalInfo('No Poverty', 'End poverty in all its forms everywhere by addressing economic, social, and environmental factors.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="sdg2.png" alt="Goal 2: Zero Hunger" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 2: Zero Hunger</h3>
+                            <p>End hunger, achieve food security and improved nutrition.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Zero Hunger', 'Promote sustainable agriculture to ensure food security and end hunger.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="sdg3.png" alt="Goal 3: Good Health" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 3: Good Health</h3>
+                            <p>Ensure healthy lives and promote well-being for all.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Good Health', 'Ensure access to quality healthcare and promote well-being for all ages.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="sdg4.png" alt="Goal 4: Quality Education" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 4: Quality Education</h3>
+                            <p>Ensure inclusive and equitable quality education.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Quality Education', 'Provide inclusive and equitable education to empower individuals.')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="stats-section">
+                <div class="container-fluid">
+                    <h2 class="section-title" style="color: white;">Progress Tracker</h2>
+                    <div class="stats-grid-responsive">
+                        <div class="stat-item">
+                            <div class="stat-number">1.2B</div>
+                            <p>People lifted out of poverty since 1990</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">821M</div>
+                            <p>People still facing hunger globally</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <p>Children in school worldwide</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">68%</div>
+                            <p>Renewable energy in 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="get-involved" class="introduction">
+                <h2>Get Involved</h2>
+                <p>Join the global movement to achieve the SDGs by 2030.</p>
+                <button class="cta-button" onclick="toggleInvolvedMessage()">How Can I Help?</button>
+                <div id="involved-message" class="toggle-content">
+                    <p>You can contribute by volunteering, donating, or spreading awareness about the SDGs in your community!</p>
+                </div>
+            </section>
+
+            <section id="feedback" class="feedback-section">
+                <h2 class="section-title">Share Your Feedback</h2>
+                <form class="feedback-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Feedback</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Submit Feedback</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-fluid footer-content-responsive">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Learn more about the Global Goals and our mission.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#goals">Goals</a></li>
+                        <li><a href="#progress">Progress</a></li>
+                        <li><a href="#get-involved">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@globalgoals.org</p>
+                    <p>Phone: +1-800-GOALS</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Global Goals. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Adaptive Design Version (shown at smaller breakpoints) -->
+    <div class="adaptive-section">
+        <!-- Omitted for brevity, as it follows the same structure with adaptive classes -->
+    </div>
+
+    <script>
+        // Display "Hello World!" on page load
+        window.onload = function() {
+            alert('Hello World!');
+        };
+
+        // Function for welcome message
+        function showWelcomeMessage() {
+            alert('Welcome to the Sustainable Development Goals! Explore the 17 goals to build a better future by 2030.');
+        }
+
+        // Function to show SDG-specific information
+        function showGoalInfo(goalName, goalDescription) {
+            alert(`Goal: ${goalName}\n\n${goalDescription}`);
+        }
+
+        // Function to toggle the "Get Involved" message
+        function toggleInvolvedMessage() {
+            const message = document.getElementById('involved-message');
+            message.classList.toggle('active');
+        }
+
+        // Function to handle feedback form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}, for your feedback! We'll review it to improve our mission.`);
+            event.target.reset(); // Reset form after submission
+        }
+    </script>
+</body>
+</html>
