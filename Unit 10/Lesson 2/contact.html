@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us to learn more about the Sustainable Development Goals.">
+    <title>Global Goals - Contact</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="responsive-section">
+        <header>
+            <div class="header-content">
+                <img src="images/sdg-hero.jpg" alt="Sustainable Development Goals Banner" class="header-image">
+                <h1>Contact Us</h1>
+                <p>Get in touch to support the SDGs</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Welcome Message</button>
+                <a href="contact.html" class="cta-button" aria-label="Contact us about the SDGs">Contact Us</a>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Global Goals Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#goals">Goals</a></li>
+                    <li><a href="index.html#progress">Progress</a></li>
+                    <li><a href="index.html#get-involved">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container-fluid">
+            <section class="feedback-section">
+                <h2 class="section-title">Contact Us</h2>
+                <form class="feedback-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-fluid footer-content-responsive">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Learn more about the Global Goals and our mission.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#goals">Goals</a></li>
+                        <li><a href="index.html#progress">Progress</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@globalgoals.org</p>
+                    <p>Phone: +1-800-GOALS</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Global Goals. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Adaptive Design Version -->
+    <div class="adaptive-section">
+        <!-- Mirrors responsive-section with adaptive classes -->
+        <header>
+            <div class="header-content">
+                <img src="images/sdg-hero.jpg" alt="Sustainable Development Goals Banner" class="header-image">
+                <h1>Contact Us</h1>
+                <p>Get in touch to support the SDGs</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Welcome Message</button>
+                <a href="contact.html" class="cta-button" aria-label="Contact us about the SDGs">Contact Us</a>
+            </div>
+        </header>
+        <nav class="main-nav">
+            <div class="container-adaptive">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Global Goals Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#goals">Goals</a></li>
+                    <li><a href="index.html#progress">Progress</a></li>
+                    <li><a href="index.html#get-involved">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Rest mirrors responsive-section with adaptive classes -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the 17 Sustainable Development Goals to build a better future by 2030.">
+    <title>Global Goals - Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="responsive-section">
+        <header>
+            <div class="header-content">
+                <img src="images/sdg-hero.jpg" alt="Sustainable Development Goals Banner" class="header-image">
+                <h1>Sustainable Development Goals</h1>
+                <p>A Blueprint for a Better World by 2030</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Welcome Message</button>
+                <a href="contact.html" class="cta-button" aria-label="Contact us about the SDGs">Contact Us</a>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Global Goals Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container-fluid">
+            <section id="goals" class="sdg-section">
+                <h2 class="section-title">The 17 Sustainable Development Goals</h2>
+                <div class="sdg-grid-responsive">
+                    <div class="sdg-item">
+                        <img src="images/sdg1.png" alt="Goal 1: No Poverty" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 1: No Poverty</h3>
+                            <p>End poverty in all its forms everywhere.</p>
+                            <button class="cta-button" onclick="showGoalInfo('No Poverty', 'End poverty in all its forms everywhere by addressing economic, social, and environmental factors.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="images/sdg2.png" alt="Goal 2: Zero Hunger" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 2: Zero Hunger</h3>
+                            <p>End hunger, achieve food security and improved nutrition.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Zero Hunger', 'Promote sustainable agriculture to ensure food security and end hunger.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="images/sdg3.png" alt="Goal 3: Good Health" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 3: Good Health</h3>
+                            <p>Ensure healthy lives and promote well-being for all.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Good Health', 'Ensure access to quality healthcare and promote well-being for all ages.')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="sdg-item">
+                        <img src="images/sdg4.png" alt="Goal 4: Quality Education" loading="lazy">
+                        <div class="sdg-item-content">
+                            <h3>Goal 4: Quality Education</h3>
+                            <p>Ensure inclusive and equitable quality education.</p>
+                            <button class="cta-button" onclick="showGoalInfo('Quality Education', 'Provide inclusive and equitable education to empower individuals.')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="stats-section">
+                <div class="container-fluid">
+                    <h2 class="section-title" style="color: white;">Progress Tracker</h2>
+                    <div class="stats-grid-responsive">
+                        <div class="stat-item">
+                            <div class="stat-number">1.2B</div>
+                            <p>People lifted out of poverty since 1990</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">821M</div>
+                            <p>People still facing hunger globally</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <p>Children in school worldwide</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">68%</div>
+                            <p>Renewable energy in 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="get-involved" class="introduction">
+                <h2>Get Involved</h2>
+                <p>Join the global movement to achieve the SDGs by 2030.</p>
+                <button class="cta-button" onclick="toggleInvolvedMessage()">How Can I Help?</button>
+                <div id="involved-message" class="toggle-content">
+                    <p>You can contribute by volunteering, donating, or spreading awareness about the SDGs in your community!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-fluid footer-content-responsive">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Learn more about the Global Goals and our mission.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#goals">Goals</a></li>
+                        <li><a href="#progress">Progress</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: info@globalgoals.org</p>
+                    <p>Phone: +1-800-GOALS</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Global Goals. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Adaptive Design Version (shown at smaller breakpoints) -->
+    <div class="adaptive-section">
+        <!-- Mirrors responsive-section with adaptive classes -->
+        <header>
+            <div class="header-content">
+                <img src="images/sdg-hero.jpg" alt="Sustainable Development Goals Banner" class="header-image">
+                <h1>Sustainable Development Goals</h1>
+                <p>A Blueprint for a Better World by 2030</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Welcome Message</button>
+                <a href="contact.html" class="cta-button" aria-label="Contact us about the SDGs">Contact Us</a>
+            </div>
+        </header>
+        <nav class="main-nav">
+            <div class="container-adaptive">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Global Goals Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Rest mirrors responsive-section with adaptive classes -->
+    </div>
+</body>
+</html>
