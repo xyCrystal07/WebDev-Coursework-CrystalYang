@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crystal's portfolio showcasing web development skills and passion for UN Global Goals.">
+    <title>Crystal's Portfolio - Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="responsive-section">
+        <header>
+            <div class="header-content">
+                <img src="images/profile.jpg" alt="Profile photo of Crystal" class="header-image">
+                <h1>Welcome to Crystal's Portfolio</h1>
+                <p>I'm Crystal, a web developer dedicated to creating accessible, user-friendly websites that promote education and sustainability.</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Say Hello!</button>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="container-fluid">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Crystal's Portfolio Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="behind-the-curtain.html">Behind the Curtain</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container-fluid">
+            <section class="introduction">
+                <h2>About Me</h2>
+                <p>I’m a passionate web developer with skills in HTML, CSS, and JavaScript, focused on building websites that inspire learning and accessibility, inspired by the UN Global Goals.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-fluid footer-content-responsive">
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: yxycrystal111@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="global-goals.html">Global Goals</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Crystal's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="adaptive-section">
+        <header>
+            <div class="header-content">
+                <img src="images/profile.jpg" alt="Profile photo of Crystal" class="header-image">
+                <h1>Welcome to Crystal's Portfolio</h1>
+                <p>I'm Crystal, a web developer dedicated to creating accessible, user-friendly websites.</p>
+                <button class="cta-button" onclick="showWelcomeMessage()" aria-label="View welcome message">Say Hello!</button>
+            </div>
+        </header>
+        <nav class="main-nav">
+            <div class="container-adaptive">
+                <a href="index.html" class="d-inline-block">
+                    <img src="images/logo.png" alt="Crystal's Portfolio Logo" class="nav-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="behind-the-curtain.html">Behind the Curtain</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
